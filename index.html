@@ -8,4 +8,50 @@
   <h1>ゲーム制作のログサイト…テスト中</h1>
   <p>つくってるよー</p>
 </body>
+  <head>
+  <meta charset="UTF-8">
+  <title>r0yo0ain Web</title>
+  <style>
+    body { font-family: sans-serif; padding: 2rem; background: #f4f4f4; }
+    nav button { padding: 0.5rem 1rem; margin: 0.2rem; cursor: pointer; }
+    .tab-content { display: none; margin-top: 2rem; }
+    .post { background: white; padding: 1rem; margin-bottom: 1rem; border-radius: 8px; }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <button onclick="showTab('log-n')">Log-n</button>
+    <button onclick="showTab('log-r')">Log-r</button>
+  </nav>
+
+  <!-- Log-nページ -->
+  <div id="log-n" class="tab-content">
+    <div class="post">
+      <h2>Log-n 第1回</h2>
+      <p>ここにLog-nの最初の記事内容が入ります。</p>
+    </div>
+    <div class="post">
+      <h2>Log-n 第2回</h2>
+      <p>次の記事も追加できます。</p>
+    </div>
+  </div>
+
+  <!-- Log-rページ -->
+  <div id="log-r" class="tab-content">
+    <div class="post">
+      <h2>Log-r 第1回</h2>
+      <p>こちらはLog-rのブログ記事です。</p>
+    </div>
+  </div>
+
+  <script>
+    function showTab(tabId) {
+      document.querySelectorAll('.tab-content').forEach(el => el.style.display = 'none');
+      document.getElementById(tabId).style.display = 'block';
+    }
+    showTab('log-n'); // 最初に表示するタブ
+  </script>
+
+</body>
 </html>
