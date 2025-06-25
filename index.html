@@ -3,22 +3,56 @@
 <head>
   <meta charset="UTF-8">
   <title>r0yo0ain Web</title>
-</head>
-<body>
-  <h1>ゲーム制作のログサイト…テスト中</h1>
-  <p>つくってるよー</p>
-</body>
-  <head>
-  <meta charset="UTF-8">
-  <title>r0yo0ain Web</title>
   <style>
-    body { font-family: sans-serif; padding: 2rem; background: #f4f4f4; }
-    nav button { padding: 0.5rem 1rem; margin: 0.2rem; cursor: pointer; }
-    .tab-content { display: none; margin-top: 2rem; }
-    .post { background: white; padding: 1rem; margin-bottom: 1rem; border-radius: 8px; }
+    body {
+      font-family: sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #222;
+      color: white;
+      padding: 1.5rem;
+      text-align: center;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background: #ddd;
+      padding: 1rem;
+    }
+    nav button {
+      padding: 0.5rem 1.5rem;
+      margin: 0 0.5rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      background: white;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    nav button:hover {
+      background: #f0f0f0;
+    }
+    .tab-content {
+      display: none;
+      padding: 2rem;
+    }
+    .post {
+      background: white;
+      padding: 1rem;
+      margin-bottom: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.05);
+    }
   </style>
 </head>
 <body>
+
+  <header>
+    <h1>ゲーム制作のログサイト…テスト中</h1>
+    <p>つくってるよー</p>
+  </header>
 
   <nav>
     <button onclick="showTab('log-n')">Log-n</button>
@@ -29,11 +63,11 @@
   <div id="log-n" class="tab-content">
     <div class="post">
       <h2>Log-n 第1回</h2>
-      <p>ここにLog-nの最初の記事内容が入ります。</p>
+      <p>こっちはななちゃんのイラストとか用</p>
     </div>
     <div class="post">
       <h2>Log-n 第2回</h2>
-      <p>次の記事も追加できます。</p>
+      <p>コード上で記事を増やしていくかんじ</p>
     </div>
   </div>
 
@@ -41,7 +75,7 @@
   <div id="log-r" class="tab-content">
     <div class="post">
       <h2>Log-r 第1回</h2>
-      <p>こちらはLog-rのブログ記事です。</p>
+      <p>こっちはストーリー用</p>
     </div>
   </div>
 
@@ -50,7 +84,8 @@
       document.querySelectorAll('.tab-content').forEach(el => el.style.display = 'none');
       document.getElementById(tabId).style.display = 'block';
     }
-    showTab('log-n'); // 最初に表示するタブ
+    // 最初は何も表示しないようにするならコメントアウト
+    // showTab('log-n');
   </script>
 
 </body>
