@@ -53,6 +53,10 @@ nav button:hover {
 
 h1, h2, p {
   margin: 0 0 1rem 0;
+
+.post p {
+  white-space: pre-line;
 }
+
 
 }
